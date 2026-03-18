@@ -3,6 +3,15 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    {/* Grid pattern overlay */}
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        backgroundImage:
+          'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+      }}
+    />
     {/* Blue glow behind title */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
       <div className="w-[700px] h-[400px] rounded-full bg-primary/15 blur-[120px]" />
