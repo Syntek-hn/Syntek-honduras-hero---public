@@ -3,17 +3,14 @@ import { useRef } from "react";
 import { Check, X, MessageSquare } from "lucide-react";
 
 const employeeCosts = [
-  { label: "Salario mínimo", value: "$600/mes" },
+  { label: "Salario", value: "$600/mes" },
   { label: "IHSS + RAP", value: "$100/mes" },
-  { label: "Aguinaldo", value: "$600 al año" },
-  { label: "Vacaciones pagas", value: "$300 al año" },
+  { label: "Aguinaldo + vacaciones", value: "$900 al año" },
 ];
 
 const syntekBenefits = [
-  "Disponible los 365 días sin descanso",
-  "Atiende miles de clientes al mismo tiempo",
-  "Nunca pide permiso ni se enferma",
-  "Desde $149/mes = solo $1,788 al año",
+  "Disponible 365 días sin descanso",
+  "Desde $149/mes = $1,788 al año",
   "Ahorras más de $7,800 al año",
 ];
 
