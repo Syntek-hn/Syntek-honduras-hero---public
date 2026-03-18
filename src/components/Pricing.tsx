@@ -5,13 +5,16 @@ import { Check, X, MessageSquare } from "lucide-react";
 const employeeCosts = [
   { label: "Salario", value: "$600/mes" },
   { label: "IHSS + RAP", value: "$100/mes" },
-  { label: "Aguinaldo + vacaciones", value: "$900 al año" },
+  { label: "Decimocuarto", value: "$600 (junio)" },
+{ label: "Aguinaldo", value: "$600 (diciembre)" },
+{ label: "Vacaciones pagas", value: "$200 al año" },
+  
 ];
 
 const syntekBenefits = [
   "Disponible 365 días sin descanso",
   "Desde $149/mes = $1,788 al año",
-  "Ahorras más de $7,800 al año",
+  "Ahorras mas de $9,000 al año",
 ];
 
 const plans = [
