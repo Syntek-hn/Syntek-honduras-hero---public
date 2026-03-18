@@ -119,7 +119,7 @@ const Pricing = () => {
             className="bg-card border border-primary/30 rounded-2xl p-8 card-shadow"
           >
             <h3 className="font-heading text-lg font-semibold mb-5 text-foreground">
-              Syntek trabaja 24/7 por:
+              Syntek trabaja 24/7:
             </h3>
             <ul className="space-y-3 mb-6">
               {syntekBenefits.map((item) => (
