@@ -20,10 +20,10 @@ const syntekBenefits = [
 const plans = [
   {
     name: "Starter",
-    price: "$149",
+    price: "$171",
     period: "/mes",
     desc: "Ideal para negocios que inician con automatización.",
-    setup: "Instalación única: $400",
+    setup: "Instalación única: $460",
     features: [
       "1 asistente IA por WhatsApp o Telegram",
       "Hasta 1,000 mensajes al mes",
@@ -36,10 +36,10 @@ const plans = [
   },
   {
     name: "Business",
-    price: "$249",
+    price: "$286",
     period: "/mes",
     desc: "Para negocios que necesitan más poder y alcance.",
-    setup: "Instalación única: $600",
+    setup: "Instalación única: $690",
     features: [
       "2 asistentes IA por WhatsApp y Telegram",
       "Hasta 3,000 mensajes al mes",
@@ -52,10 +52,10 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$399",
+    price: "$459",
     period: "/mes",
     desc: "Automatización completa para empresas en crecimiento.",
-    setup: "Instalación única: $800",
+    setup: "Instalación única: $920",
     features: [
       "3 asistentes IA configurados",
       "Hasta 10,000 mensajes al mes",
