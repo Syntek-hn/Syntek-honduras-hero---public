@@ -3,9 +3,9 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-    {/* Background glow */}
+    {/* Blue glow behind title */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div className="w-[600px] h-[600px] rounded-full opacity-20" style={{ background: "var(--gradient-glow)" }} />
+      <div className="w-[700px] h-[400px] rounded-full bg-primary/15 blur-[120px]" />
     </div>
 
     <div className="container mx-auto px-4 text-center relative z-10">
