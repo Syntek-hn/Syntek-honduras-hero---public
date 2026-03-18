@@ -139,7 +139,7 @@ const Pricing = () => {
           className="text-center mb-20"
         >
           <p className="inline-block bg-primary/10 border border-primary/20 text-primary font-heading font-bold text-lg md:text-xl px-6 py-3 rounded-xl">
-            Ahorras más de $7,800 al año con Syntek.
+            Ahorras más de $7,800 al año.
           </p>
         </motion.div>
 
