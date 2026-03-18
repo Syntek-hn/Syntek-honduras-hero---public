@@ -17,7 +17,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <a href="#" className="flex items-center gap-2">
-          <img src={syntekLogo} alt="Syntek" className="h-9 w-auto" />
+          <img src={syntekLogo} alt="Syntek" className="w-[140px] h-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">
