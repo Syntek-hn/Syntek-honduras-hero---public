@@ -157,7 +157,7 @@ const Pricing = () => {
             Planes y <span className="text-gradient">precios</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Inversión clara, sin sorpresas. Cancela cuando quieras.
+            Inversión clara, sin sorpresas.
           </p>
         </motion.div>
 
@@ -218,7 +218,7 @@ const Pricing = () => {
             <MessageSquare size={16} className="text-primary shrink-0" />
             ¿Necesitas llamadas IA automáticas? Cotización personalizada según tu volumen.{" "}
             <a
-              href="https://wa.me/50499999999?text=Hola%2C%20quiero%20cotizar%20llamadas%20IA"
+              href="https://wa.me/50498092116?text=Hola%2C%20quiero%20cotizar%20llamadas%20IA"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline font-medium"
