@@ -33,7 +33,7 @@ const CTA = () => {
               <MessageCircle size={20} /> Escribir por WhatsApp
             </a>
             <a
-              href="mailto:contacto@syntek.hn"
+              href="mailto:info@syntekhn.com"
               className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-secondary transition-colors"
             >
               <Mail size={20} /> Enviar correo
