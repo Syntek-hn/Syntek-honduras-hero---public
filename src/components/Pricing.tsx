@@ -13,7 +13,7 @@ const employeeCosts = [
 
 const syntekBenefits = [
   "Disponible 365 días sin descanso",
-  "Desde $149/mes = $1,788 al año",
+  "Desde $171/mes = $2,052 al año",
   "Ahorras mas de $9,000 al año",
 ];
 
