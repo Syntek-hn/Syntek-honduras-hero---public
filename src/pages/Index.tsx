@@ -1,25 +1,27 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import ProblemSolution from "@/components/ProblemSolution";
-import Services from "@/components/Services";
+import Servicios from "@/components/Servicios";
 import Process from "@/components/Process";
-import Industries from "@/components/Industries";
-import Pricing from "@/components/Pricing";
-import CTA from "@/components/CTA";
+import Industrias from "@/components/Industrias";
+import Planes from "@/components/Planes";
+import NovaVsEmpleado from "@/components/NovaVsEmpleado";
+import Testimonios from "@/components/Testimonios";
+import QuienesSomos from "@/components/QuienesSomos";
+import Formulario from "@/components/Formulario";
 import Footer from "@/components/Footer";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
     <Navbar />
     <Hero />
-    <Stats />
-    <ProblemSolution />
-    <Services />
+    <Servicios />
     <Process />
-    <Industries />
-    <Pricing />
-    <CTA />
+    <Industrias />
+    <Planes />
+    <NovaVsEmpleado />
+    <Testimonios />
+    <QuienesSomos />
+    <Formulario />
     <Footer />
   </div>
 );

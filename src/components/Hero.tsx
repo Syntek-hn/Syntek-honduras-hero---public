@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import ParticleBackground from "./ParticleBackground";
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <ParticleBackground />
     {/* Grid pattern overlay */}
     <div
       className="absolute inset-0 pointer-events-none"
