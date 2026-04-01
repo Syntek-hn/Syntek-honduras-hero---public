@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://syntek-hn.github.io/syntek-honduras-hero",
+  "homepage": "https://syntekhn.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
