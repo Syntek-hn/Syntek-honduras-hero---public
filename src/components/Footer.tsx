@@ -1,19 +1,20 @@
 import { MessageCircle, Mail } from "lucide-react";
-import syntekLogo from "@/assets/syntek-logo.png";
 
 const WHATSAPP = "https://wa.me/50498092116";
 
 const Footer = () => (
-  <footer className="border-t border-white/5 bg-[#07071a] py-12">
+  <footer className="border-t border-white/5 bg-[#05050f] py-12">
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <img src={syntekLogo} alt="Syntek AI" className="h-8 w-auto" />
+        <a href="#" className="flex items-center">
+          <span className="font-heading font-bold text-xl tracking-tight text-white">
+            <span style={{ color: "#00D4FF" }}>Syn</span>tek
+          </span>
         </a>
 
-        {/* Nav links */}
+        {/* Nav */}
         <nav className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
           <a href="#servicios" className="hover:text-white transition-colors">Servicios</a>
           <a href="#proceso" className="hover:text-white transition-colors">Cómo Funciona</a>
@@ -28,7 +29,10 @@ const Footer = () => (
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors font-medium"
+            className="inline-flex items-center gap-2 font-medium transition-colors"
+            style={{ color: '#00D4FF' }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#66e5ff')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#00D4FF')}
           >
             <MessageCircle size={16} />
             +504 9809-2116
@@ -44,7 +48,7 @@ const Footer = () => (
       </div>
 
       <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-        © 2026 Syntek AI. Todos los derechos reservados.
+        © 2026 Syntek Honduras. Todos los derechos reservados.
       </div>
     </div>
   </footer>

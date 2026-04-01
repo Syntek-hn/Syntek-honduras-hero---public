@@ -1,87 +1,111 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
-import syntekLogo from "@/assets/syntek-logo.png";
 
-const navLinks = [
+const links = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Cómo Funciona", href: "#proceso" },
-  { label: "Industrias", href: "#industrias" },
   { label: "Planes", href: "#planes" },
-  { label: "Nosotros", href: "#quienes-somos" },
+  { label: "Quiénes Somos", href: "#quienes-somos" },
+  { label: "Contacto", href: "#formulario" },
 ];
 
 const WHATSAPP = "https://wa.me/50498092116";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <motion.nav
-      initial={{ y: -20, opacity: 0 }}
+      initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-[#07071a]/85 backdrop-blur-xl"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#05050f]/90 backdrop-blur-md border-b border-[#00D4FF]/10"
+          : "bg-transparent"
+      }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#" className="flex items-center gap-2">
-          <img src={syntekLogo} alt="Syntek" className="w-[140px] h-auto" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#" className="flex items-center">
+          <span className="font-heading font-bold text-xl tracking-tight text-white">
+            <span style={{ color: "#00D4FF" }}>Syn</span>tek
+          </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-7">
-          {navLinks.map((link) => (
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
             <a
-              key={link.label}
+              key={link.href}
               href={link.href}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
-          >
-            <MessageCircle size={16} />
-            +504 9809-2116
-          </a>
         </div>
 
-        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        {/* CTA button */}
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold btn-electric"
+        >
+          <MessageCircle size={15} />
+          +504 9809-2116
+        </a>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden text-gray-400 hover:text-white transition-colors"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden border-t border-white/5 bg-[#07071a] px-4 pb-4"
-        >
-          {navLinks.map((link) => (
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-[#05050f]/95 border-b border-[#00D4FF]/10 px-4 pb-4 overflow-hidden"
+          >
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block py-3 text-gray-400 hover:text-white transition-colors border-b border-white/5"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
-              key={link.label}
-              href={link.href}
-              className="block py-3 text-gray-400 hover:text-white transition-colors"
+              href={WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-bold btn-electric"
               onClick={() => setOpen(false)}
             >
-              {link.label}
+              <MessageCircle size={15} />
+              WhatsApp +504 9809-2116
             </a>
-          ))}
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 mt-3 bg-green-500 text-white px-5 py-3 rounded-lg text-sm font-semibold"
-            onClick={() => setOpen(false)}
-          >
-            <MessageCircle size={16} />
-            +504 9809-2116
-          </a>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
