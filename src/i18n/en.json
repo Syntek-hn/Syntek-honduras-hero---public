@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "industries": "Industries",
+    "product": "Product",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "login": "Log in",
+    "cta": "Start free 14-day trial"
+  },
+  "hero": {
+    "headline": "Automate your business customer service with artificial intelligence",
+    "subheadline": "Your AI assistant handles clients on WhatsApp, Facebook & Instagram 24/7. No code, no hassle.",
+    "cta": "Start free 14 days — no card required",
+    "ctaSecondary": "Watch demo",
+    "trusted": "200+ businesses across LATAM trust Syntek"
+  },
+  "industries": {
+    "title": "Industries",
+    "subtitle": "Solutions designed for your type of business",
+    "clinica": { "name": "Clinics & medical offices", "desc": "Schedule appointments, send reminders and answer common medical questions automatically." },
+    "restaurante": { "name": "Restaurants & cafes", "desc": "Receive orders, share your menu and confirm reservations without losing a single customer." },
+    "inmobiliaria": { "name": "Real estate", "desc": "Qualify leads, share property catalogs and schedule visits instantly." },
+    "ecommerce": { "name": "Online stores", "desc": "Answer product questions, track orders and recover abandoned carts." },
+    "educacion": { "name": "Educational institutions", "desc": "Share enrollment info, schedules and answer questions from parents and students." },
+    "legal": { "name": "Law firms", "desc": "Schedule consultations, answer FAQs and follow up on cases." },
+    "automotriz": { "name": "Car dealerships", "desc": "Show inventory, schedule test drives and quote financing." },
+    "belleza": { "name": "Beauty salons & spas", "desc": "Schedule appointments, send promotions and manage cancellations automatically." },
+    "seguros": { "name": "Insurance agents", "desc": "Quote policies, follow up on renewals and handle claims." },
+    "servicios": { "name": "Professional services", "desc": "Qualify prospects, schedule meetings and send automatic quotes." }
+  },
+  "process": {
+    "title": "How it works",
+    "subtitle": "In 3 simple steps your business is automated",
+    "step1": { "title": "Connect your channels", "desc": "Link WhatsApp, Facebook & Instagram in less than 5 minutes. No code needed." },
+    "step2": { "title": "Set up your assistant", "desc": "Teach it about your business: prices, hours, products. Your AI learns instantly." },
+    "step3": { "title": "Serve clients 24/7", "desc": "Your assistant answers, schedules, sells and transfers to humans when needed." }
+  },
+  "pricing": {
+    "title": "Plans & pricing",
+    "subtitle": "No contracts. Cancel anytime. 14 days free.",
+    "monthly": "monthly",
+    "popular": "Most popular",
+    "cta": "Start free",
+    "ctaEnterprise": "Contact sales",
+    "starter": {
+      "name": "Starter",
+      "price": "49",
+      "desc": "For businesses getting started with AI",
+      "features": ["1 AI assistant", "3 human agents", "1,000 conversations/mo", "WhatsApp only", "Email support"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "99",
+      "desc": "For growing businesses",
+      "features": ["2 AI assistants", "10 human agents", "5,000 conversations/mo", "WhatsApp + Facebook", "CRM + Tracking", "Priority support"]
+    },
+    "business": {
+      "name": "Business",
+      "price": "199",
+      "desc": "For high-volume companies",
+      "features": ["3 AI assistants", "Unlimited agents", "Unlimited conversations", "All channels", "Mass campaigns", "Advanced reports", "External API"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "399",
+      "desc": "For large-scale operations",
+      "features": ["Unlimited AI assistants", "Everything unlimited", "All channels", "Guaranteed SLA", "Dedicated 24/7 support", "Assisted implementation", "AI voice calls"]
+    }
+  },
+  "why": {
+    "title": "Why Syntek",
+    "subtitle": "Real results from businesses like yours",
+    "stat1": { "value": "85%", "label": "of queries resolved by AI with no human intervention" },
+    "stat2": { "value": "3x", "label": "more clients served with the same team" },
+    "stat3": { "value": "< 30s", "label": "average first response time" },
+    "stat4": { "value": "40h", "label": "saved per month per business on average" }
+  },
+  "ctaFinal": {
+    "title": "Your business deserves 24/7 service",
+    "subtitle": "Start today and see results from the first week. No credit card required.",
+    "cta": "Start free 14-day trial"
+  },
+  "footer": {
+    "desc": "Intelligent automation for businesses in Latin America and the United States.",
+    "product": "Product",
+    "links": { "features": "Features", "pricing": "Pricing", "industries": "Industries", "integrations": "Integrations" },
+    "company": "Company",
+    "companyLinks": { "about": "About us", "blog": "Blog", "careers": "Careers", "contact": "Contact" },
+    "legal": "Legal",
+    "legalLinks": { "privacy": "Privacy policy", "terms": "Terms of service", "cookies": "Cookie policy" },
+    "rights": "All rights reserved."
+  }
+}

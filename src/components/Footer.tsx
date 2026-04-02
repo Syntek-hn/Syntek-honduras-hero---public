@@ -1,57 +1,60 @@
-import { MessageCircle, Mail } from "lucide-react";
+import { useT } from "@/i18n/provider";
 
-const WHATSAPP = "https://wa.me/50498092116";
+export default function Footer() {
+  const t = useT();
+  const year = new Date().getFullYear();
 
-const Footer = () => (
-  <footer className="border-t border-white/5 bg-[#05050f] py-12">
-    <div className="container mx-auto px-4">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+  return (
+    <footer className="bg-slate-900 text-slate-400 pt-16 pb-8 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+                <span className="text-white text-sm font-bold">S</span>
+              </div>
+              <span className="text-lg font-bold text-white">Syntek <span className="text-blue-400">AI</span></span>
+            </div>
+            <p className="text-sm leading-relaxed">{t("footer.desc")}</p>
+          </div>
 
-        {/* Logo */}
-        <a href="#" className="flex items-center">
-          <span className="font-heading font-bold text-xl tracking-tight text-white">
-            <span style={{ color: "#00D4FF" }}>Syn</span>tek
-          </span>
-        </a>
+          {/* Product */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">{t("footer.product")}</h4>
+            <ul className="space-y-2.5">
+              {Object.entries({ features: "#proceso", pricing: "#precios", industries: "#industrias", integrations: "#" }).map(([key, href]) => (
+                <li key={key}><a href={href} className="text-sm hover:text-white transition-colors">{t(`footer.links.${key}`)}</a></li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Nav */}
-        <nav className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-          <a href="#servicios" className="hover:text-white transition-colors">Servicios</a>
-          <a href="#proceso" className="hover:text-white transition-colors">Cómo Funciona</a>
-          <a href="#industrias" className="hover:text-white transition-colors">Industrias</a>
-          <a href="#planes" className="hover:text-white transition-colors">Planes</a>
-          <a href="#quienes-somos" className="hover:text-white transition-colors">Nosotros</a>
-        </nav>
+          {/* Company */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">{t("footer.company")}</h4>
+            <ul className="space-y-2.5">
+              {["about", "blog", "careers", "contact"].map((key) => (
+                <li key={key}><a href="#" className="text-sm hover:text-white transition-colors">{t(`footer.companyLinks.${key}`)}</a></li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Contact */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-sm">
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-medium transition-colors"
-            style={{ color: '#00D4FF' }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#66e5ff')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#00D4FF')}
-          >
-            <MessageCircle size={16} />
-            +504 9809-2116
-          </a>
-          <a
-            href="mailto:info@syntekhn.com"
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-          >
-            <Mail size={16} />
-            info@syntekhn.com
-          </a>
+          {/* Legal */}
+          <div>
+            <h4 className="text-sm font-semibold text-white mb-4">{t("footer.legal")}</h4>
+            <ul className="space-y-2.5">
+              {["privacy", "terms", "cookies"].map((key) => (
+                <li key={key}><a href="#" className="text-sm hover:text-white transition-colors">{t(`footer.legalLinks.${key}`)}</a></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-slate-800 pt-8 text-center">
+          <p className="text-xs text-slate-500">&copy; {year} Syntek AI. {t("footer.rights")}</p>
         </div>
       </div>
-
-      <div className="mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
-        © 2026 Syntek Honduras. Todos los derechos reservados.
-      </div>
-    </div>
-  </footer>
-);
-
-export default Footer;
+    </footer>
+  );
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,105 +6,41 @@
 
 @layer base {
   :root {
-    --background: 240 33% 4%;
-    --foreground: 210 20% 92%;
-    --card: 240 25% 6%;
-    --card-foreground: 210 20% 92%;
-    --popover: 240 25% 6%;
-    --popover-foreground: 210 20% 92%;
-    --primary: 191 100% 50%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 240 20% 8%;
-    --secondary-foreground: 210 20% 85%;
-    --muted: 240 15% 10%;
-    --muted-foreground: 215 15% 55%;
-    --accent: 191 100% 50%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 240 15% 12%;
-    --input: 240 15% 12%;
-    --ring: 191 100% 50%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --primary: 213 94% 52%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 213 94% 52%;
+    --border: 214 32% 91%;
+    --ring: 213 94% 52%;
     --radius: 0.75rem;
   }
-}
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  * { border-color: hsl(var(--border)); }
 
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
-    background-color: #05050f;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #FFFFFF;
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
   }
 }
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, #00D4FF, #0099cc);
+    background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 50%, #6366F1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
-  .text-gradient {
-    background: linear-gradient(135deg, #00D4FF, #0099cc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .cyber-grid {
-    background-image:
-      linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-
-  .section-divider {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, #00D4FF, transparent);
-    border-radius: 2px;
-  }
-
-  .btn-glow {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 4px 15px rgba(0, 212, 255, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-  }
-
-  .btn-glow:hover {
-    box-shadow: 0 0 35px rgba(0, 212, 255, 0.5), 0 6px 20px rgba(0, 212, 255, 0.3);
-  }
-
-  .btn-electric {
-    background: linear-gradient(135deg, #00D4FF, #0099cc);
-    color: #000;
-    font-weight: 700;
-    transition: all 0.3s ease;
-  }
-
-  .btn-electric:hover {
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-    transform: translateY(-1px);
-  }
-
-  .glow-border {
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.08);
-  }
-
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, #00D4FF, #0099cc);
-  }
+  .bg-gradient-hero { background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 100%); }
+  .bg-gradient-section { background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%); }
 }
+
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }

@@ -1,84 +1,39 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Search, Settings, FlaskConical, Zap } from "lucide-react";
-import AnimatedSection from "./ui/AnimatedSection";
+import { useT } from "@/i18n/provider";
+import { Link2, Bot, Headphones } from "lucide-react";
 
 const steps = [
-  {
-    icon: Search,
-    num: "01",
-    title: "Diagnóstico",
-    desc: "Analizamos tu negocio y encontramos dónde Nova genera más impacto.",
-  },
-  {
-    icon: Settings,
-    num: "02",
-    title: "Configuración",
-    desc: "Entrenamos a Nova con la información real de tu negocio.",
-  },
-  {
-    icon: FlaskConical,
-    num: "03",
-    title: "Pruebas",
-    desc: "Probamos con vos antes de lanzar para asegurar que todo funcione perfecto.",
-  },
-  {
-    icon: Zap,
-    num: "04",
-    title: "En vivo 24/7",
-    desc: "Tu negocio atendiendo clientes mientras dormís.",
-  },
+  { key: "step1", icon: Link2, color: "bg-blue-600" },
+  { key: "step2", icon: Bot, color: "bg-violet-600" },
+  { key: "step3", icon: Headphones, color: "bg-emerald-600" },
 ];
 
-const Process = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+export default function Process() {
+  const t = useT();
 
   return (
-    <section id="proceso" ref={ref} className="py-24 bg-[#05050f] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00D4FF]/20 to-transparent" />
-      <div className="absolute inset-0 cyber-grid pointer-events-none opacity-30" />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium mb-4"
-            style={{ background: 'rgba(0,212,255,0.08)', border: '1px solid rgba(0,212,255,0.3)', color: '#00D4FF' }}>
-            Proceso
-          </span>
-          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 text-white">
-            De la idea a producción{" "}
-            <span className="gradient-text">en 48 horas</span>
-          </h2>
-        </AnimatedSection>
-
-        <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto relative">
-          {/* Connector line */}
-          <div className="hidden md:block absolute top-12 left-[12%] right-[12%] h-px"
-            style={{ background: 'linear-gradient(90deg, #00D4FF22, #00D4FF44, #00D4FF22)' }} />
-
-          {steps.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 25 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="text-center relative"
-            >
-              <div
-                className="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-5 relative z-10"
-                style={{ background: 'linear-gradient(135deg, #00D4FF, #0099cc)' }}
-              >
-                <s.icon size={22} className="text-black" />
+    <section id="proceso" className="py-24 px-6">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">{t("process.title")}</h2>
+          <p className="text-lg text-slate-500 max-w-xl mx-auto">{t("process.subtitle")}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {steps.map(({ key, icon: Icon, color }, i) => (
+            <div key={key} className="text-center">
+              <div className="relative mx-auto mb-6">
+                <div className={`w-16 h-16 ${color} rounded-2xl flex items-center justify-center mx-auto shadow-lg`}>
+                  <Icon size={28} className="text-white" />
+                </div>
+                <span className="absolute -top-2 -right-2 w-7 h-7 bg-white rounded-full border-2 border-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">
+                  {i + 1}
+                </span>
               </div>
-              <div className="text-xs font-semibold mb-2" style={{ color: '#00D4FF' }}>{s.num}</div>
-              <h3 className="font-heading text-lg font-semibold mb-2 text-white">{s.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{s.desc}</p>
-            </motion.div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">{t(`process.${key}.title`)}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed max-w-xs mx-auto">{t(`process.${key}.desc`)}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default Process;
+}

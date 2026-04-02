@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "industries": "Industrias",
+    "product": "Producto",
+    "pricing": "Precios",
+    "resources": "Recursos",
+    "login": "Iniciar sesión",
+    "cta": "Empieza gratis 14 días"
+  },
+  "hero": {
+    "headline": "Automatiza la atención de tu negocio con inteligencia artificial",
+    "subheadline": "Tu asistente de IA atiende clientes por WhatsApp, Facebook e Instagram 24/7. Sin código, sin complicaciones.",
+    "cta": "Empieza gratis 14 días sin tarjeta",
+    "ctaSecondary": "Ver demo",
+    "trusted": "Más de 200 negocios en LATAM confían en Syntek"
+  },
+  "industries": {
+    "title": "Industrias",
+    "subtitle": "Soluciones diseñadas para tu tipo de negocio",
+    "clinica": { "name": "Clínicas y consultorios", "desc": "Agenda citas, envía recordatorios y responde dudas médicas frecuentes automáticamente." },
+    "restaurante": { "name": "Restaurantes y cafeterías", "desc": "Recibe pedidos, comparte tu menú y confirma reservaciones sin perder un solo cliente." },
+    "inmobiliaria": { "name": "Inmobiliarias", "desc": "Califica leads, comparte catálogos de propiedades y agenda visitas al instante." },
+    "ecommerce": { "name": "Tiendas en línea", "desc": "Resuelve dudas de productos, da seguimiento a pedidos y recupera carritos abandonados." },
+    "educacion": { "name": "Instituciones educativas", "desc": "Informa sobre inscripciones, horarios y responde preguntas de padres y alumnos." },
+    "legal": { "name": "Despachos legales", "desc": "Agenda consultas, responde preguntas frecuentes y da seguimiento a casos." },
+    "automotriz": { "name": "Agencias automotrices", "desc": "Muestra inventario, agenda pruebas de manejo y cotiza financiamiento." },
+    "belleza": { "name": "Salones de belleza y spa", "desc": "Agenda citas, envía promociones y gestiona cancelaciones automáticamente." },
+    "seguros": { "name": "Agentes de seguros", "desc": "Cotiza pólizas, da seguimiento a renovaciones y atiende reclamaciones." },
+    "servicios": { "name": "Servicios profesionales", "desc": "Califica prospectos, agenda reuniones y envía cotizaciones automáticas." }
+  },
+  "process": {
+    "title": "Cómo funciona",
+    "subtitle": "En 3 simples pasos tu negocio está automatizado",
+    "step1": { "title": "Conecta tus canales", "desc": "Vincula WhatsApp, Facebook e Instagram en menos de 5 minutos. Sin código." },
+    "step2": { "title": "Configura tu asistente", "desc": "Enséñale sobre tu negocio: precios, horarios, productos. Tu IA aprende al instante." },
+    "step3": { "title": "Atiende clientes 24/7", "desc": "Tu asistente responde, agenda, vende y transfiere a humanos cuando es necesario." }
+  },
+  "pricing": {
+    "title": "Planes y precios",
+    "subtitle": "Sin contratos. Cancela cuando quieras. 14 días gratis.",
+    "monthly": "mensual",
+    "popular": "Más popular",
+    "cta": "Empezar gratis",
+    "ctaEnterprise": "Contactar ventas",
+    "starter": {
+      "name": "Starter",
+      "price": "49",
+      "desc": "Para negocios que inician con IA",
+      "features": ["1 asistente IA", "3 agentes humanos", "1,000 conversaciones/mes", "Solo WhatsApp", "Soporte por email"]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "99",
+      "desc": "Para negocios en crecimiento",
+      "features": ["2 asistentes IA", "10 agentes humanos", "5,000 conversaciones/mes", "WhatsApp + Facebook", "CRM + Seguimiento", "Soporte prioritario"]
+    },
+    "business": {
+      "name": "Business",
+      "price": "199",
+      "desc": "Para empresas con alto volumen",
+      "features": ["3 asistentes IA", "Agentes ilimitados", "Conversaciones ilimitadas", "Todos los canales", "Campañas masivas", "Reportes avanzados", "API externa"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "399",
+      "desc": "Para operaciones a gran escala",
+      "features": ["Asistentes IA ilimitados", "Todo ilimitado", "Todos los canales", "SLA garantizado", "Soporte dedicado 24/7", "Implementación asistida", "Llamadas IA por voz"]
+    }
+  },
+  "why": {
+    "title": "Por qué Syntek",
+    "subtitle": "Resultados reales de negocios como el tuyo",
+    "stat1": { "value": "85%", "label": "de consultas resueltas por IA sin intervención humana" },
+    "stat2": { "value": "3x", "label": "más clientes atendidos con el mismo equipo" },
+    "stat3": { "value": "< 30s", "label": "tiempo promedio de primera respuesta" },
+    "stat4": { "value": "40h", "label": "ahorradas al mes por negocio en promedio" }
+  },
+  "ctaFinal": {
+    "title": "Tu negocio merece atención 24/7",
+    "subtitle": "Empieza hoy y ve resultados desde la primera semana. Sin tarjeta de crédito.",
+    "cta": "Empieza gratis 14 días"
+  },
+  "footer": {
+    "desc": "Automatización inteligente para negocios en Latinoamérica y Estados Unidos.",
+    "product": "Producto",
+    "links": { "features": "Funcionalidades", "pricing": "Precios", "industries": "Industrias", "integrations": "Integraciones" },
+    "company": "Empresa",
+    "companyLinks": { "about": "Sobre nosotros", "blog": "Blog", "careers": "Trabaja con nosotros", "contact": "Contacto" },
+    "legal": "Legal",
+    "legalLinks": { "privacy": "Política de privacidad", "terms": "Términos de servicio", "cookies": "Política de cookies" },
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,113 +1,71 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { useT, useLocale } from "@/i18n/provider";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
-const links = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Planes", href: "#planes" },
-  { label: "Quiénes Somos", href: "#quienes-somos" },
-  { label: "Contacto", href: "#formulario" },
-];
+const industryKeys = ["clinica", "restaurante", "inmobiliaria", "ecommerce", "educacion", "legal", "automotriz", "belleza", "seguros", "servicios"];
 
-const WHATSAPP = "https://wa.me/50498092116";
-
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+export default function Navbar() {
+  const t = useT();
+  const { locale, setLocale } = useLocale();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
 
   return (
-    <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#05050f]/90 backdrop-blur-md border-b border-[#00D4FF]/10"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center">
-          <span className="font-heading font-bold text-xl tracking-tight text-white">
-            <span style={{ color: "#00D4FF" }}>Syn</span>tek
-          </span>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+            <span className="text-white text-sm font-bold">S</span>
+          </div>
+          <span className="text-lg font-bold text-slate-900">Syntek <span className="text-blue-600">AI</span></span>
         </a>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="hidden lg:flex items-center gap-8">
+          <div className="relative" onMouseEnter={() => setIndustriesOpen(true)} onMouseLeave={() => setIndustriesOpen(false)}>
+            <button className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+              {t("nav.industries")} <ChevronDown size={14} />
+            </button>
+            {industriesOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
+                <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 grid grid-cols-2 gap-1 w-[480px]">
+                  {industryKeys.map((key) => (
+                    <a key={key} href="#industrias" onClick={() => setIndustriesOpen(false)} className="flex flex-col px-3 py-2.5 rounded-xl hover:bg-blue-50 transition-colors">
+                      <span className="text-sm font-medium text-slate-900">{t(`industries.${key}.name`)}</span>
+                      <span className="text-xs text-slate-500 mt-0.5 line-clamp-1">{t(`industries.${key}.desc`)}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          <a href="#proceso" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.product")}</a>
+          <a href="#precios" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.pricing")}</a>
+          <a href="#porque" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.resources")}</a>
         </div>
 
-        {/* CTA button */}
-        <a
-          href={WHATSAPP}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold btn-electric"
-        >
-          <MessageCircle size={15} />
-          +504 9809-2116
-        </a>
+        <div className="hidden lg:flex items-center gap-3">
+          <button onClick={() => setLocale(locale === "es" ? "en" : "es")} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm text-slate-500 hover:text-slate-900 transition-colors">
+            <Globe size={15} />
+            <span className="text-xs font-medium">{locale === "es" ? "🇪🇸 ES" : "🇺🇸 EN"}</span>
+          </button>
+          <a href="https://app.syntekhn.com/login" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.login")}</a>
+          <a href="#precios" className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md">{t("nav.cta")}</a>
+        </div>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-gray-400 hover:text-white transition-colors"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
+        <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="md:hidden bg-[#05050f]/95 border-b border-[#00D4FF]/10 px-4 pb-4 overflow-hidden"
-          >
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="block py-3 text-gray-400 hover:text-white transition-colors border-b border-white/5"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-bold btn-electric"
-              onClick={() => setOpen(false)}
-            >
-              <MessageCircle size={15} />
-              WhatsApp +504 9809-2116
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+      {mobileOpen && (
+        <div className="lg:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-3">
+          <a href="#industrias" className="block text-sm font-medium text-slate-700 py-2">{t("nav.industries")}</a>
+          <a href="#proceso" className="block text-sm font-medium text-slate-700 py-2">{t("nav.product")}</a>
+          <a href="#precios" className="block text-sm font-medium text-slate-700 py-2">{t("nav.pricing")}</a>
+          <button onClick={() => setLocale(locale === "es" ? "en" : "es")} className="text-xs font-medium text-slate-500">{locale === "es" ? "🇪🇸 Español" : "🇺🇸 English"}</button>
+          <a href="#precios" className="block text-center bg-blue-600 text-white text-sm font-medium py-2.5 rounded-xl mt-2">{t("nav.cta")}</a>
+        </div>
+      )}
+    </nav>
   );
-};
-
-export default Navbar;
+}

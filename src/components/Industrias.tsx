@@ -1,146 +1,41 @@
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import {
-  Scissors,
-  Stethoscope,
-  UtensilsCrossed,
-  Hotel,
-  Home,
-  HardHat,
-  Lightbulb,
-} from 'lucide-react'
-import AnimatedSection from './ui/AnimatedSection'
+import { useT } from "@/i18n/provider";
+import { Stethoscope, UtensilsCrossed, Building, ShoppingCart, GraduationCap, Scale, Car, Scissors, Shield, Briefcase } from "lucide-react";
 
-const industrias = [
-  {
-    icon: Scissors,
-    name: 'Barberías',
-    desc: 'Agenda citas automáticamente y confirma sin llamadas perdidas',
-    color: 'from-pink-500 to-rose-600',
-  },
-  {
-    icon: Stethoscope,
-    name: 'Clínicas',
-    desc: 'Gestiona consultas, recordatorios y atención a pacientes 24/7',
-    color: 'from-emerald-500 to-teal-600',
-  },
-  {
-    icon: UtensilsCrossed,
-    name: 'Restaurantes',
-    desc: 'Toma pedidos, reservaciones y responde menús al instante',
-    color: 'from-orange-500 to-amber-600',
-  },
-  {
-    icon: Hotel,
-    name: 'Hoteles',
-    desc: 'Reservas, tarifas y preguntas frecuentes atendidas sin espera',
-    color: 'from-blue-500 to-indigo-600',
-  },
-  {
-    icon: Home,
-    name: 'Bienes Raíces',
-    desc: 'Califica prospectos y agenda visitas mientras duermes',
-    color: 'from-violet-500 to-purple-600',
-  },
-  {
-    icon: HardHat,
-    name: 'Constructoras',
-    desc: 'Atiende consultas de proyectos y cotizaciones automáticamente',
-    color: 'from-yellow-500 to-orange-500',
-  },
-  {
-    icon: Lightbulb,
-    name: 'Emprendedores',
-    desc: 'Escala tu negocio con IA sin contratar personal adicional',
-    color: 'from-cyan-500 to-blue-500',
-  },
-]
+const industries = [
+  { key: "clinica", icon: Stethoscope, color: "bg-red-50 text-red-600" },
+  { key: "restaurante", icon: UtensilsCrossed, color: "bg-orange-50 text-orange-600" },
+  { key: "inmobiliaria", icon: Building, color: "bg-blue-50 text-blue-600" },
+  { key: "ecommerce", icon: ShoppingCart, color: "bg-violet-50 text-violet-600" },
+  { key: "educacion", icon: GraduationCap, color: "bg-emerald-50 text-emerald-600" },
+  { key: "legal", icon: Scale, color: "bg-slate-100 text-slate-700" },
+  { key: "automotriz", icon: Car, color: "bg-sky-50 text-sky-600" },
+  { key: "belleza", icon: Scissors, color: "bg-pink-50 text-pink-600" },
+  { key: "seguros", icon: Shield, color: "bg-amber-50 text-amber-600" },
+  { key: "servicios", icon: Briefcase, color: "bg-indigo-50 text-indigo-600" },
+];
 
 export default function Industrias() {
-  const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-
-  const container = {
-    hidden: {},
-    show: { transition: { staggerChildren: 0.08, delayChildren: 0.1 } },
-  }
-
-  const item = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.55, ease: [0.25, 0.46, 0.45, 0.94] } },
-  }
+  const t = useT();
 
   return (
-    <section id="industrias" className="py-24 bg-[#0a0a16] relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
-      <div className="absolute inset-0 cyber-grid pointer-events-none opacity-40" />
-
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-600/8 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/4 left-0 w-64 h-64 bg-cyan-500/6 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-4">
-            Industrias
-          </span>
-          <h2 className="font-heading font-bold text-4xl lg:text-5xl text-white mb-4">
-            Nova se adapta a{' '}
-            <span className="gradient-text">cualquier negocio</span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            Configuramos a Nova según tu industria, tono de marca y tipo de clientes.
-          </p>
-          <div className="section-divider mx-auto mt-6" />
-        </AnimatedSection>
-
-        <motion.div
-          ref={ref}
-          variants={container}
-          initial="hidden"
-          animate={inView ? 'show' : 'hidden'}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
-        >
-          {industrias.map((ind) => {
-            const Icon = ind.icon
-            return (
-              <motion.div
-                key={ind.name}
-                variants={item}
-                className="group rounded-2xl bg-[#0d0d1a] border border-white/5 p-6 flex flex-col items-center text-center gap-4 hover:border-blue-500/30 hover:-translate-y-1.5 hover:shadow-[0_8px_30px_rgba(59,130,246,0.1)] transition-all duration-300 cursor-default"
-              >
-                <div
-                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${ind.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <Icon size={24} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-white text-base mb-1">
-                    {ind.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{ind.desc}</p>
-                </div>
-              </motion.div>
-            )
-          })}
-
-          <motion.div
-            variants={item}
-            className="rounded-2xl border-2 border-dashed border-blue-500/20 p-6 flex flex-col items-center text-center gap-3 hover:border-blue-500/50 transition-colors cursor-default"
-          >
-            <div className="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center">
-              <span className="text-2xl font-bold text-blue-400">?</span>
+    <section id="industrias" className="py-24 px-6 bg-gradient-section">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">{t("industries.title")}</h2>
+          <p className="text-lg text-slate-500 max-w-xl mx-auto">{t("industries.subtitle")}</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {industries.map(({ key, icon: Icon, color }) => (
+            <div key={key} className="group bg-white rounded-2xl p-5 border border-slate-100 hover:border-blue-200 hover:shadow-lg transition-all cursor-pointer">
+              <div className={`w-10 h-10 rounded-xl ${color} flex items-center justify-center mb-3`}>
+                <Icon size={20} />
+              </div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-1">{t(`industries.${key}.name`)}</h3>
+              <p className="text-xs text-slate-500 leading-relaxed">{t(`industries.${key}.desc`)}</p>
             </div>
-            <div>
-              <h3 className="font-heading font-bold text-blue-400 text-base mb-1">
-                Tu negocio
-              </h3>
-              <p className="text-xs text-gray-500 leading-relaxed">
-                Nova se adapta a cualquier industria
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
+          ))}
+        </div>
       </div>
     </section>
-  )
+  );
 }
