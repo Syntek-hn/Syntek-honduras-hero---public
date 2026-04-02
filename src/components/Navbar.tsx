@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useT, useLocale } from "@/i18n/provider";
+import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
 const industryKeys = ["clinica", "restaurante", "inmobiliaria", "ecommerce", "educacion", "legal", "automotriz", "belleza", "seguros", "servicios"];
@@ -9,6 +10,16 @@ export default function Navbar() {
   const { locale, setLocale } = useLocale();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
@@ -44,10 +55,25 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <button onClick={() => setLocale(locale === "es" ? "en" : "es")} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm text-slate-500 hover:text-slate-900 transition-colors">
-            <Globe size={15} />
-            <span className="text-xs font-medium">{locale === "es" ? "🇪🇸 ES" : "🇺🇸 EN"}</span>
-          </button>
+          <div className="relative" ref={langRef}>
+            <button onClick={() => setLangOpen(!langOpen)} className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm text-slate-500 hover:text-slate-900 transition-colors">
+              <Globe size={15} />
+              <span className="text-xs font-medium">{locale === "es" ? "🇪🇸 ES" : "🇺🇸 EN"}</span>
+              <ChevronDown size={12} className={`transition-transform ${langOpen ? "rotate-180" : ""}`} />
+            </button>
+            {langOpen && (
+              <div className="absolute right-0 top-full mt-2 w-36 bg-white rounded-xl shadow-xl border border-slate-100 py-1 z-50">
+                <button onClick={() => { setLocale("es"); setLangOpen(false); }}
+                  className={`flex items-center gap-2.5 w-full px-3.5 py-2.5 text-sm transition-colors ${locale === "es" ? "text-blue-600 bg-blue-50" : "text-slate-700 hover:bg-slate-50"}`}>
+                  <span className="text-base">🇪🇸</span> Español
+                </button>
+                <button onClick={() => { setLocale("en"); setLangOpen(false); }}
+                  className={`flex items-center gap-2.5 w-full px-3.5 py-2.5 text-sm transition-colors ${locale === "en" ? "text-blue-600 bg-blue-50" : "text-slate-700 hover:bg-slate-50"}`}>
+                  <span className="text-base">🇺🇸</span> English
+                </button>
+              </div>
+            )}
+          </div>
           <a href="https://app.syntekhn.com/login" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.login")}</a>
           <a href="#precios" className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md">{t("nav.cta")}</a>
         </div>

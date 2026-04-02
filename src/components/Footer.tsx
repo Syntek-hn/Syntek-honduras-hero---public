@@ -1,4 +1,11 @@
 import { useT } from "@/i18n/provider";
+import { Link } from "react-router-dom";
+
+const legalLinks: Record<string, string> = {
+  privacy: "/privacidad",
+  terms: "/terminos",
+  cookies: "/cookies",
+};
 
 export default function Footer() {
   const t = useT();
@@ -10,12 +17,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
                 <span className="text-white text-sm font-bold">S</span>
               </div>
               <span className="text-lg font-bold text-white">Syntek <span className="text-blue-400">AI</span></span>
-            </div>
+            </Link>
             <p className="text-sm leading-relaxed">{t("footer.desc")}</p>
           </div>
 
@@ -23,7 +30,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">{t("footer.product")}</h4>
             <ul className="space-y-2.5">
-              {Object.entries({ features: "#proceso", pricing: "#precios", industries: "#industrias", integrations: "#" }).map(([key, href]) => (
+              {Object.entries({ features: "/#proceso", pricing: "/#precios", industries: "/#industrias", integrations: "/#" }).map(([key, href]) => (
                 <li key={key}><a href={href} className="text-sm hover:text-white transition-colors">{t(`footer.links.${key}`)}</a></li>
               ))}
             </ul>
@@ -39,12 +46,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Legal — links to actual pages */}
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">{t("footer.legal")}</h4>
             <ul className="space-y-2.5">
-              {["privacy", "terms", "cookies"].map((key) => (
-                <li key={key}><a href="#" className="text-sm hover:text-white transition-colors">{t(`footer.legalLinks.${key}`)}</a></li>
+              {(["privacy", "terms", "cookies"] as const).map((key) => (
+                <li key={key}>
+                  <Link to={legalLinks[key]} className="text-sm hover:text-white transition-colors">
+                    {t(`footer.legalLinks.${key}`)}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
