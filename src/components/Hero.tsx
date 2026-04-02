@@ -1,12 +1,16 @@
 import { useT } from "@/i18n/provider";
 import { ArrowRight, Play } from "lucide-react";
+import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
   const t = useT();
 
   return (
-    <section className="bg-gradient-hero pt-32 pb-20 px-6">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="relative bg-gradient-hero pt-32 pb-20 px-6 overflow-hidden">
+      {/* Particles */}
+      <ParticleBackground />
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-8">
           <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
@@ -51,7 +55,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Social proof avatars */}
+        {/* Social proof */}
         <div className="flex items-center justify-center gap-3 mt-12">
           <div className="flex -space-x-2">
             {["bg-blue-500", "bg-emerald-500", "bg-violet-500", "bg-amber-500"].map((bg, i) => (

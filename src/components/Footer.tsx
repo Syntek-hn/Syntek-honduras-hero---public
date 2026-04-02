@@ -17,11 +17,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-                <span className="text-white text-sm font-bold">S</span>
-              </div>
-              <span className="text-lg font-bold text-white">Syntek <span className="text-blue-400">AI</span></span>
+            <Link to="/" className="inline-block mb-4">
+              <span className="text-xl font-extrabold tracking-tight text-white">Syntek <span className="text-blue-400">AI</span></span>
             </Link>
             <p className="text-sm leading-relaxed">{t("footer.desc")}</p>
           </div>
