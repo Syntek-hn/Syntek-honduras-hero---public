@@ -40,9 +40,8 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">{t("footer.company")}</h4>
             <ul className="space-y-2.5">
-              {["about", "contact"].map((key) => (
-                <li key={key}><a href="#" className="text-sm hover:text-white transition-colors">{t(`footer.companyLinks.${key}`)}</a></li>
-              ))}
+              <li><Link to="/sobre-nosotros" className="text-sm hover:text-white transition-colors">{t("footer.companyLinks.about")}</Link></li>
+              <li><a href="https://wa.me/50498092116" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-white transition-colors">{t("footer.companyLinks.contact")}</a></li>
             </ul>
           </div>
 

@@ -6,6 +6,7 @@ import Index from "./pages/Index.tsx";
 import Terminos from "./pages/Terminos.tsx";
 import Privacidad from "./pages/Privacidad.tsx";
 import Cookies from "./pages/Cookies.tsx";
+import SobreNosotros from "./pages/SobreNosotros.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
             <Route path="/terminos" element={<Terminos />} />
             <Route path="/privacidad" element={<Privacidad />} />
             <Route path="/cookies" element={<Cookies />} />
+            <Route path="/sobre-nosotros" element={<SobreNosotros />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
