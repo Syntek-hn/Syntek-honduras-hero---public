@@ -49,6 +49,7 @@ export default function Navbar() {
           <a href="#proceso" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.product")}</a>
           <a href="#precios" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.pricing")}</a>
           <a href="#porque" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.resources")}</a>
+          <Link to="/sobre-nosotros" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.about")}</Link>
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
@@ -87,6 +88,7 @@ export default function Navbar() {
           <a href="#industrias" className="block text-sm font-medium text-slate-700 py-2">{t("nav.industries")}</a>
           <a href="#proceso" className="block text-sm font-medium text-slate-700 py-2">{t("nav.product")}</a>
           <a href="#precios" className="block text-sm font-medium text-slate-700 py-2">{t("nav.pricing")}</a>
+          <Link to="/sobre-nosotros" className="block text-sm font-medium text-slate-700 py-2">{t("nav.about")}</Link>
           <button onClick={() => setLocale(locale === "es" ? "en" : "es")} className="text-xs font-medium text-slate-500">{locale === "es" ? "🇪🇸 Español" : "🇺🇸 English"}</button>
           {/* TODO: Habilitar login/register en mobile cuando esté lista */}
           <a href="#precios" className="block text-center bg-blue-600 text-white text-sm font-medium py-2.5 rounded-xl mt-2">{t("nav.cta")}</a>
