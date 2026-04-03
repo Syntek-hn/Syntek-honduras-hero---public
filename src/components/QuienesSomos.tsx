@@ -51,7 +51,7 @@ export default function QuienesSomos() {
               </span>
               <h2 className="font-heading font-bold text-4xl lg:text-5xl text-white mb-8 leading-tight">
                 Somos{' '}
-                <span className="gradient-text">Syntek Honduras</span>
+                <span className="gradient-text">Syntek AI</span>
               </h2>
             </AnimatedSection>
 

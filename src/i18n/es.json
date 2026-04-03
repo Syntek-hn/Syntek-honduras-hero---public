@@ -5,6 +5,7 @@
     "pricing": "Precios",
     "resources": "Recursos",
     "login": "Iniciar sesión",
+    "register": "Registrarse",
     "cta": "Empieza gratis 14 días"
   },
   "hero": {
@@ -46,25 +47,25 @@
       "name": "Starter",
       "price": "49",
       "desc": "Para negocios que inician con IA",
-      "features": ["1 asistente IA", "3 agentes humanos", "1,000 conversaciones/mes", "Solo WhatsApp", "Soporte por email"]
+      "features": ["1 agente IA", "3 agentes humanos", "1,000 conversaciones/mes", "Solo WhatsApp", "Dashboard básico"]
     },
     "pro": {
       "name": "Pro",
       "price": "99",
       "desc": "Para negocios en crecimiento",
-      "features": ["2 asistentes IA", "10 agentes humanos", "5,000 conversaciones/mes", "WhatsApp + Facebook", "CRM + Seguimiento", "Soporte prioritario"]
+      "features": ["2 agentes IA", "10 agentes humanos", "5,000 conversaciones/mes", "WhatsApp + Facebook", "CRM + Seguimiento de Clientes", "Métricas por agente"]
     },
     "business": {
       "name": "Business",
       "price": "199",
       "desc": "Para empresas con alto volumen",
-      "features": ["3 asistentes IA", "Agentes ilimitados", "Conversaciones ilimitadas", "Todos los canales", "Campañas masivas", "Reportes avanzados", "API externa"]
+      "features": ["3 agentes IA", "Humanos ilimitados", "Conversaciones ilimitadas", "Todos los canales", "Campañas masivas con IA", "Módulo de cobranzas", "Export PDF/CSV", "APIs"]
     },
     "enterprise": {
       "name": "Enterprise",
       "price": "399",
       "desc": "Para operaciones a gran escala",
-      "features": ["Asistentes IA ilimitados", "Todo ilimitado", "Todos los canales", "SLA garantizado", "Soporte dedicado 24/7", "Implementación asistida", "Llamadas IA por voz"]
+      "features": ["IA ilimitados", "Todo ilimitado", "Todos los canales", "SLA garantizado", "Soporte 24/7", "Onboarding prioritario"]
     }
   },
   "why": {

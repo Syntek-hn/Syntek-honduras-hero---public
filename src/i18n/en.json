@@ -5,6 +5,7 @@
     "pricing": "Pricing",
     "resources": "Resources",
     "login": "Log in",
+    "register": "Sign up",
     "cta": "Start free 14-day trial"
   },
   "hero": {
@@ -46,25 +47,25 @@
       "name": "Starter",
       "price": "49",
       "desc": "For businesses getting started with AI",
-      "features": ["1 AI assistant", "3 human agents", "1,000 conversations/mo", "WhatsApp only", "Email support"]
+      "features": ["1 AI agent", "3 human agents", "1,000 conversations/mo", "WhatsApp only", "Basic dashboard"]
     },
     "pro": {
       "name": "Pro",
       "price": "99",
       "desc": "For growing businesses",
-      "features": ["2 AI assistants", "10 human agents", "5,000 conversations/mo", "WhatsApp + Facebook", "CRM + Tracking", "Priority support"]
+      "features": ["2 AI agents", "10 human agents", "5,000 conversations/mo", "WhatsApp + Facebook", "CRM + Client Tracking", "Per-agent metrics"]
     },
     "business": {
       "name": "Business",
       "price": "199",
       "desc": "For high-volume companies",
-      "features": ["3 AI assistants", "Unlimited agents", "Unlimited conversations", "All channels", "Mass campaigns", "Advanced reports", "External API"]
+      "features": ["3 AI agents", "Unlimited humans", "Unlimited conversations", "All channels", "AI-powered mass campaigns", "Collections module", "PDF/CSV export", "APIs"]
     },
     "enterprise": {
       "name": "Enterprise",
       "price": "399",
       "desc": "For large-scale operations",
-      "features": ["Unlimited AI assistants", "Everything unlimited", "All channels", "Guaranteed SLA", "Dedicated 24/7 support", "Assisted implementation", "AI voice calls"]
+      "features": ["Unlimited AI", "Everything unlimited", "All channels", "Guaranteed SLA", "24/7 support", "Priority onboarding"]
     }
   },
   "why": {

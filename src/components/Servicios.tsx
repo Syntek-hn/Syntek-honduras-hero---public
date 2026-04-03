@@ -90,7 +90,7 @@ export default function Servicios() {
 
         <AnimatedSection delay={0.1} className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-gray-400 text-lg leading-relaxed">
-            Nova es el asistente con inteligencia artificial conversacional de Syntek Honduras.
+            Nova es el asistente con inteligencia artificial conversacional de Syntek AI.
             No es un bot de respuestas fijas — entiende lo que tu cliente escribe y responde de
             forma natural, como una persona real,{' '}
             <span className="text-white font-semibold">las 24 horas del día.</span>
