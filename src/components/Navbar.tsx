@@ -71,8 +71,8 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <a href="https://app.syntekhn.com/login" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.login")}</a>
-          <a href="https://app.syntekhn.com/register" className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md">{t("nav.register")}</a>
+          <a href="https://syntek-platform.vercel.app/login" className="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">{t("nav.login")}</a>
+          <a href="https://syntek-platform.vercel.app/register" className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-md">{t("nav.register")}</a>
         </div>
 
         <button className="lg:hidden p-2" onClick={() => setMobileOpen(!mobileOpen)}>
@@ -86,8 +86,8 @@ export default function Navbar() {
           <a href="#proceso" className="block text-sm font-medium text-slate-700 py-2">{t("nav.product")}</a>
           <a href="#precios" className="block text-sm font-medium text-slate-700 py-2">{t("nav.pricing")}</a>
           <button onClick={() => setLocale(locale === "es" ? "en" : "es")} className="text-xs font-medium text-slate-500">{locale === "es" ? "🇪🇸 Español" : "🇺🇸 English"}</button>
-          <a href="https://app.syntekhn.com/login" className="block text-center text-sm font-medium text-slate-700 py-2">{t("nav.login")}</a>
-          <a href="https://app.syntekhn.com/register" className="block text-center bg-blue-600 text-white text-sm font-medium py-2.5 rounded-xl mt-2">{t("nav.register")}</a>
+          <a href="https://syntek-platform.vercel.app/login" className="block text-center text-sm font-medium text-slate-700 py-2">{t("nav.login")}</a>
+          <a href="https://syntek-platform.vercel.app/register" className="block text-center bg-blue-600 text-white text-sm font-medium py-2.5 rounded-xl mt-2">{t("nav.register")}</a>
         </div>
       )}
     </nav>
