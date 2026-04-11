@@ -132,6 +132,11 @@ export default function Planes() {
                 </div>
 
                 <ul className="space-y-2.5 mb-6 flex-1">
+                  {plan.key !== "starter" && (
+                    <li className={`text-xs font-semibold pb-2 mb-1 border-b ${isEnterprise ? "text-amber-400 border-slate-700" : "text-blue-600 border-slate-100"}`}>
+                      Todo lo de {plan.key === "pro" ? "Starter" : plan.key === "business" ? "Pro" : "Business"} +
+                    </li>
+                  )}
                   {plan.features.map((f, i) => (
                     <li key={i} className="flex items-start gap-2.5">
                       <Check size={16} className={`mt-0.5 flex-shrink-0 ${isEnterprise ? "text-amber-400" : "text-blue-600"}`} />
