@@ -46,7 +46,7 @@ export default function Planes() {
                     </li>
                   ))}
                 </ul>
-                <a href={isEnterprise ? "https://wa.me/50498092116" : "#"}
+                <a href={isEnterprise ? "https://wa.me/50498092116" : "https://syntek-platform.vercel.app/register"}
                   className={`block text-center py-3 rounded-xl text-sm font-semibold transition-all ${
                     popular
                       ? "bg-blue-600 hover:bg-blue-700 text-white shadow-md"
