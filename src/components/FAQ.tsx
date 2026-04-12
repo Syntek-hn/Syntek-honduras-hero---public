@@ -4,35 +4,23 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "¿Cuánto tiempo toma configurar todo?",
-    a: "Menos de 10 minutos. Conectas tu WhatsApp, le dices a tu IA de qué trata tu negocio, y listo. No necesitas saber de programación ni contratar a nadie.",
+    a: "Menos de 10 minutos. Conectas tu WhatsApp, le enseñas a tu IA sobre tu negocio, y listo. Sin código, sin complicaciones.",
   },
   {
-    q: "¿Necesito saber de tecnología?",
-    a: "Para nada. Si sabes usar WhatsApp, puedes usar Syntek. Todo se configura con clics, sin código, sin instalaciones complicadas.",
-  },
-  {
-    q: "¿Mis datos y los de mis clientes están seguros?",
-    a: "Sí. Usamos encriptación de grado bancario, servidores seguros y cumplimos con estándares internacionales de privacidad. Tus datos son solo tuyos.",
-  },
-  {
-    q: "¿Puedo probar gratis antes de pagar?",
-    a: "Sí, tienes 14 días gratis con todas las funciones del plan Pro. Sin tarjeta de crédito. Si no te convence, no pagas nada.",
+    q: "¿Puedo probar gratis?",
+    a: "Sí, 14 días gratis con todas las funciones. Sin tarjeta de crédito. Si no te convence, no pagas nada.",
   },
   {
     q: "¿Qué pasa si mi IA no sabe responder algo?",
-    a: "Tu IA transfiere la conversación a una persona de tu equipo automáticamente. El cliente nunca se queda sin respuesta.",
+    a: "Transfiere la conversación a alguien de tu equipo automáticamente. Tu cliente nunca se queda sin respuesta.",
   },
   {
     q: "¿Puedo cancelar en cualquier momento?",
-    a: "Sí, sin penalidades ni letras pequeñas. Puedes cancelar, pausar o cambiar de plan cuando quieras desde tu panel.",
+    a: "Sí, sin penalidades. Cancela, pausa o cambia de plan cuando quieras.",
   },
   {
     q: "¿Puedo usar mi número de WhatsApp actual?",
-    a: "Sí, conectas tu número de WhatsApp Business existente. No necesitas un número nuevo ni cambiar nada con tus clientes.",
-  },
-  {
-    q: "¿En qué idiomas funciona la IA?",
-    a: "Tu IA entiende y responde en español, inglés y portugués. Detecta automáticamente el idioma del cliente y responde en el mismo.",
+    a: "Sí, conectas tu número existente. No necesitas uno nuevo.",
   },
 ];
 
