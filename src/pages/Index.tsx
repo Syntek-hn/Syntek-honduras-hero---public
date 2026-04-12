@@ -4,6 +4,9 @@ import Industrias from "@/components/Industrias";
 import Process from "@/components/Process";
 import Planes from "@/components/Planes";
 import WhySyntek from "@/components/WhySyntek";
+import Testimonios from "@/components/Testimonios";
+import FAQ from "@/components/FAQ";
+import Formulario from "@/components/Formulario";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 
@@ -16,6 +19,9 @@ const Index = () => {
       <Process />
       <Planes />
       <WhySyntek />
+      <Testimonios />
+      <FAQ />
+      <Formulario />
       <CTAFinal />
       <Footer />
 

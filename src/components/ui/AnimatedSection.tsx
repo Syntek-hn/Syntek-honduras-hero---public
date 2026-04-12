@@ -15,7 +15,7 @@ export default function AnimatedSection({
   direction = 'up',
 }: Props) {
   const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '-20px' })
 
   const initial = {
     opacity: 0,

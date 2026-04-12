@@ -3,21 +3,30 @@ import AnimatedSection from './ui/AnimatedSection'
 
 const testimonios = [
   {
-    empresa: 'INCCO & Asociados',
-    sector: 'Constructora',
-    autor: 'Jorge Membreño, Director General',
-    iniciales: 'IA',
+    empresa: 'Restaurante El Fogón',
+    sector: 'Restaurante',
+    autor: 'María López, Propietaria',
+    iniciales: 'ML',
     texto:
-      'Antes perdíamos clientes porque no podíamos responder fuera de horario. Con Nova atendemos al instante, incluso los fines de semana.',
+      'Antes cerrábamos y perdíamos todos los pedidos de la noche. Ahora nuestra IA toma pedidos, confirma reservaciones y responde preguntas del menú mientras dormimos. Las ventas nocturnas subieron un 35%.',
     stars: 5,
   },
   {
-    empresa: 'Vrain Media',
-    sector: 'Agencia de Marketing',
-    autor: 'Jorge Membreño, Fundador',
-    iniciales: 'VM',
+    empresa: 'Clínica Dental Sonrisa',
+    sector: 'Salud',
+    autor: 'Dr. Carlos Reyes, Director',
+    iniciales: 'CR',
     texto:
-      'Nuestros clientes esperaban respuesta inmediata. Nova cambió eso. Ahora cada cliente siente que está siendo atendido en todo momento.',
+      'Los pacientes llamaban para agendar citas y nadie contestaba porque estábamos atendiendo. Syntek agenda citas automáticamente, envía recordatorios y las cancelaciones bajaron a la mitad.',
+    stars: 5,
+  },
+  {
+    empresa: 'Boutique Stella',
+    sector: 'Retail',
+    autor: 'Andrea Martínez, Fundadora',
+    iniciales: 'AM',
+    texto:
+      'Yo sola manejaba el WhatsApp de la tienda y no daba abasto. Ahora la IA responde preguntas de precios, muestra el catálogo y hasta cierra ventas. Yo solo empaco y envío.',
     stars: 5,
   },
 ]
@@ -43,7 +52,7 @@ export default function Testimonios() {
           <div className="section-divider mx-auto mt-6" />
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-6">
           {testimonios.map((t, i) => (
             <AnimatedSection key={t.empresa} delay={i * 0.15}>
               <div className="relative h-full rounded-3xl bg-[#0d0d1a] border border-white/5 p-8 hover:border-[#00D4FF]/20 transition-all duration-300 flex flex-col"
