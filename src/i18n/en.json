@@ -38,36 +38,153 @@
     "step3": { "title": "Serve clients 24/7", "desc": "Your assistant answers, schedules, sells and transfers to humans when needed." }
   },
   "pricing": {
-    "title": "Plans & pricing",
-    "subtitle": "No contracts. Cancel anytime. 14 days free.",
-    "monthly": "monthly",
-    "popular": "Most popular",
-    "cta": "Start free",
-    "ctaEnterprise": "Contact sales",
+    "title": "A plan for every stage of your business",
+    "subtitle": "Start free for 14 days. No card required. Cancel anytime.",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save20": "Save 20%",
+    "perMonth": "/mo",
+    "perYear": "/yr",
+    "popular": "Recommended",
+    "ctaTrial": "Start 14-day free trial",
+    "ctaSales": "Talk to sales",
+    "trialNote": "14 days free · No card · Cancel anytime",
+    "salesNote": "Custom contract · Guided onboarding",
+    "allFromPrev": "Everything in {prev} +",
+
     "starter": {
       "name": "Starter",
-      "price": "49",
-      "desc": "For businesses getting started with AI",
-      "features": ["1 AI agent", "3 human agents", "1,000 conversations/mo", "WhatsApp only", "Basic dashboard"]
+      "tagline": "To start",
+      "desc": "For businesses just starting on WhatsApp",
+      "features": [
+        "1 AI assistant + 3 human agents",
+        "2,000 AI conversations / month",
+        "WhatsApp + Facebook + Instagram",
+        "Product catalog",
+        "WhatsApp campaigns",
+        "Automated booking",
+        "Automatic monthly reports"
+      ]
     },
     "pro": {
       "name": "Pro",
-      "price": "99",
-      "desc": "For growing businesses",
-      "features": ["2 AI agents", "10 human agents", "5,000 conversations/mo", "WhatsApp + Facebook", "CRM + Client Tracking", "Per-agent metrics"]
+      "tagline": "To grow",
+      "desc": "For sales teams that want to sell more",
+      "features": [
+        "3 AI assistants + 10 human agents",
+        "5,000 AI conversations / month",
+        "Sales pipeline",
+        "AI assistant for the owner",
+        "Advanced per-agent reports",
+        "Integrations with other platforms"
+      ]
     },
     "business": {
       "name": "Business",
-      "price": "199",
-      "desc": "For high-volume companies",
-      "features": ["3 AI agents", "Unlimited humans", "Unlimited conversations", "All channels", "AI-powered mass campaigns", "Collections module", "PDF/CSV export", "APIs"]
+      "tagline": "To scale",
+      "desc": "For companies with large teams",
+      "features": [
+        "5 AI assistants + 25 human agents",
+        "10,000 AI conversations / month",
+        "Connection with your internal systems",
+        "Unlimited automations",
+        "Priority support"
+      ]
     },
     "enterprise": {
       "name": "Enterprise",
-      "price": "399",
-      "desc": "For large-scale operations",
-      "features": ["Unlimited AI", "Everything unlimited", "All channels", "Guaranteed SLA", "24/7 support", "Priority onboarding"]
-    }
+      "tagline": "To lead",
+      "desc": "For large operations with guarantees",
+      "features": [
+        "Unlimited AI assistants + 50 human agents",
+        "15,000 AI conversations / month",
+        "Developer access",
+        "Unified corporate access",
+        "99.9% uptime guarantee",
+        "Dedicated account manager",
+        "24/7 support"
+      ]
+    },
+    "custom": {
+      "name": "Custom",
+      "tagline": "Tailored to you",
+      "desc": "For corporations and multi-location operations",
+      "priceLabel": "Custom quote",
+      "features": [
+        "Everything unlimited",
+        "Multiple WhatsApp numbers",
+        "Your brand, your platform",
+        "Guided implementation",
+        "99.99% uptime guarantee",
+        "Corporate billing"
+      ]
+    },
+
+    "compareTitle": "Compare the plans",
+    "compareSubtitle": "See exactly what's included in each plan",
+    "compareCol": { "feature": "Feature", "starter": "Starter", "pro": "Pro", "business": "Business", "enterprise": "Enterprise", "custom": "Custom" },
+    "compareYes": "Included",
+    "compareNo": "Not included",
+    "compareUnlimited": "Unlimited",
+    "compareGroup": {
+      "messaging": "Customer messaging",
+      "ai": "Artificial intelligence",
+      "team": "Team and roles",
+      "sales": "Sales and conversion",
+      "automation": "Automation",
+      "reports": "Reports and metrics",
+      "enterprise": "Enterprise features",
+      "custom": "Advanced customization"
+    },
+    "compareRows": {
+      "channels": { "label": "WhatsApp + Facebook + Instagram", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "templates": { "label": "WhatsApp templates", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "menus": { "label": "Interactive menus and forms", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "csat": { "label": "Automatic satisfaction survey", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "iaAgents": { "label": "AI assistants", "starter": "1", "pro": "3", "business": "5", "enterprise": "Unlimited", "custom": "Unlimited" },
+      "convs": { "label": "AI conversations per month", "starter": "2,000", "pro": "5,000", "business": "10,000", "enterprise": "15,000", "custom": "Unlimited" },
+      "intents": { "label": "Assistant behaviors", "starter": "5", "pro": "10", "business": "Unlimited", "enterprise": "Unlimited", "custom": "Unlimited" },
+      "rag": { "label": "AI trained with your information", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "humans": { "label": "Human agents", "starter": "3", "pro": "10", "business": "25", "enterprise": "50", "custom": "Unlimited" },
+      "manager": { "label": "Manager role", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "catalog": { "label": "Product catalog", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "campaigns": { "label": "Mass campaigns", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "pipeline": { "label": "Sales pipeline", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "internalAi": { "label": "AI assistant for the owner", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "export": { "label": "PDF and Excel export", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "calendar": { "label": "Booking and reminders", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "integrations": { "label": "Integrations with other platforms", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "externalSystems": { "label": "Connection to external systems", "starter": "no", "pro": "no", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "automations": { "label": "Automations", "starter": "Basic", "pro": "Advanced", "business": "Unlimited", "enterprise": "Unlimited", "custom": "Unlimited" },
+      "monthlyReport": { "label": "Monthly PDF report", "starter": "yes", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "agentReports": { "label": "Advanced per-agent reports", "starter": "no", "pro": "yes", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "executiveReports": { "label": "Executive reports", "starter": "no", "pro": "no", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "branding": { "label": "Reports with your branding", "starter": "no", "pro": "no", "business": "yes", "enterprise": "yes", "custom": "yes" },
+      "developerAccess": { "label": "Developer access", "starter": "no", "pro": "no", "business": "no", "enterprise": "yes", "custom": "yes" },
+      "sso": { "label": "Unified corporate access", "starter": "no", "pro": "no", "business": "no", "enterprise": "yes", "custom": "yes" },
+      "sla": { "label": "Uptime guarantee", "starter": "no", "pro": "no", "business": "no", "enterprise": "99.9%", "custom": "99.99%" },
+      "accountManager": { "label": "Dedicated account manager", "starter": "no", "pro": "no", "business": "no", "enterprise": "yes", "custom": "yes" },
+      "support247": { "label": "24/7 support", "starter": "no", "pro": "no", "business": "Priority", "enterprise": "yes", "custom": "yes" },
+      "multiPhone": { "label": "Multiple WhatsApp numbers", "starter": "no", "pro": "no", "business": "no", "enterprise": "no", "custom": "yes" },
+      "multiLocation": { "label": "Multi-location", "starter": "no", "pro": "no", "business": "no", "enterprise": "no", "custom": "yes" },
+      "whiteLabel": { "label": "Your brand across the platform", "starter": "no", "pro": "no", "business": "no", "enterprise": "no", "custom": "yes" }
+    },
+
+    "whyTitle": "Why Syntek?",
+    "whyItems": [
+      { "title": "You pay the official WhatsApp price", "desc": "No hidden fees. Marketing templates at Meta cost + 20% only on plans that include them." },
+      { "title": "The only one with an AI assistant for the owner", "desc": "Ask your assistant how the business is doing. Real data, real answers." },
+      { "title": "14 days free without a credit card", "desc": "Try the full Starter plan, no strings attached. Cancel anytime." }
+    ],
+
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      { "q": "What if I exceed my conversations?", "a": "Your assistant keeps working. You only pay $0.05 for each extra conversation." },
+      { "q": "How do campaigns work?", "a": "You send mass messages to your contacts. You only pay the official WhatsApp cost." },
+      { "q": "Can I change plans?", "a": "Yes, anytime. The change is immediate." },
+      { "q": "Is there a long-term contract?", "a": "No. Cancel whenever you want." },
+      { "q": "What's included in the trial?", "a": "Full access to the Starter plan for 14 days, no credit card required." }
+    ]
   },
   "why": {
     "title": "Why Syntek",
